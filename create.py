@@ -1,19 +1,22 @@
-# import cv2 ## installes also numpy
-#
-#
-# mat = [[[255   0   0]
-#   [255 255 255]
-#   [255 255 255]
-#   [187  41 160]]
-#
-#  [[255 255 255]
-#   [255 255 255]
-#   [255 255 255]
-#   [255 255 255]]
-#
-#  [[255 255 255]
-#   [  0   0   0]
-#   [ 47 255 173]
-#   [255 255 255]]]
-#
-# cv2.imwrite('created.png', mat)
+import streamlit as st
+import pandas as pd
+
+data = {
+  "calories": [420, 380, 390],
+  "duration": [50, 40, 45]
+}
+
+#load data into a DataFrame object:
+df = pd.DataFrame(data)
+
+st.line_chart(data=df)
+
+
+data = {'x':[1,2,3], 'y': [10, 20, 30]}
+df = pd.DataFrame(data)
+
+ser = pd.Series([1,2,3,4,5])
+st.line_chart(data=ser)
+
+
+
